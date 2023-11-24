@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c, discriminant, root1, root2;
+
+    // User input for coefficients
+    printf("Enter the values of a, b, and c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    // Calculating discriminant
+    discriminant = b * b - 4 * a * c;
+
+    // Checking discriminant for real roots
+    if (discriminant >= 0) {
+        // Calculating roots
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+
+        // Displaying roots
+        printf("Root 1 = %.2lf\n", root1);
+        printf("Root 2 = %.2lf\n", root2);
+    } else {
+        // Displaying message for no real roots
+        printf("The equation has no real roots.\n");
+    }
+
+    return 0;
+}
